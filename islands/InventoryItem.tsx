@@ -1,4 +1,4 @@
-import { ready } from "../defs.ts";
+import { ready, defs } from "../defs.ts";
 
 interface InventoryItemProps {
   hash: number | string;
@@ -7,7 +7,7 @@ interface InventoryItemProps {
 export default function InventoryItem(props: InventoryItemProps) {
   return (
     <>
-      Ready: {ready}
+      Ready: [ {JSON.stringify(ready())} ][ {JSON.stringify(defs())} ]
       {props.hash}
     </>
   );
